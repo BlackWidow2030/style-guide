@@ -1,0 +1,339 @@
+/*font-family: 'Castoro Titling', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Karma', serif;
+font-family: 'Tangerine', cursive;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/*navigation */
+
+
+nav {
+    position: fixed;
+    left: 0;
+    background-color: hsl(360, 100%, 100%);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    padding: 0 2rem;
+    z-index: 100;
+    
+    
+}
+
+ul {
+    list-style-type: none;
+    
+}
+li {
+    padding: 15px 0px;
+    font-family: 'Karma', serif;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+a {
+    
+    color: hsl(260, 34%, 17%);
+    text-decoration:none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+
+}
+
+a:active {
+    color: blue;
+    text-decoration: dotted;
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*Section Transitions */
+
+section {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in .4s;
+    
+}
+
+section.pages, section.bgcolor{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition: all ease-in .4s;
+    
+}
+
+section h1, section h2 {
+    opacity: 0;
+
+}
+
+section:target {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 50;
+}
+
+section:target h1, section:target h2 {
+    animation: 2s fadeIn forwards 0.4s;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Home Section */
+
+h1::first-letter {
+    font-size: 300px;
+}
+
+#homepage {
+    
+    font-family: 'Tangerine', cursive ;
+    font-size: 180px;
+    color: hsl(360, 100%, 100%);
+    
+}
+
+
+
+#home {
+    background-color: hsl(260, 34%, 17%);
+    text-align: center;
+}
+
+/*#home button {
+    color: hsl(360, 100%, 100%);
+    background:hsl(55, 54%, 73%);
+    font-family: 'Karma', serif;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    border-radius: 2px;
+    border: 2px solid hsl(360, 100%, 100%);
+    margin: 30px;
+}*/
+
+/* Colour Section */
+
+#colour div{
+    width: 100%;
+    color: black;
+    padding: 30px;
+    overflow: visible;
+    display: block;
+    text-align: center;
+    background-color: hsl(55, 54%, 73%);
+    height: 400vh;
+    
+}
+
+#colour h2 {
+   
+   color: black;
+    font-family: 'Tangerine', cursive ;
+    font-size: 100px;
+    text-align: center;
+}
+
+.bgcolor h3 {
+    color: hsl(360, 100%, 100%);
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    padding: 10px;
+}
+
+div#terracota, div#champagne, div#purple, div#blue, div#gray {
+    height: 400vh;
+    
+}
+
+
+div#terracota {
+    background: hsl(11, 69%, 61%);
+    
+}
+/* this doesn't work had to make the colour of the general div class champagne and that worked*/
+div#champagne {
+    background: hsl(55, 54%, 73%);
+}
+div#purple {
+    background: hsl(260, 34%, 17%);
+    
+}
+
+div#blue {
+    background: hsl(202, 41%, 48%);
+    
+    
+
+}
+
+div#gray {
+    background-color: hsl(211, 10%, 53%);
+   
+}
+
+/*-----------------*/
+/* Fonts section */
+#fonts h2{
+    color: hsl(360, 100%, 100%);
+    font-family: 'Tangerine', cursive;
+    font-size: 130px;
+    z-index: 10;
+    padding: 30px;
+      
+}
+#fonts {
+    background: hsl(55, 54%, 73%);
+}
+
+
+
+div#castro {
+    background-color: hsl(0, 0%, 0%);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+div#castro h3, div#castro p {
+    font-family: 'Castoro Titling', cursive;
+    color:hsl(360, 100%, 100%)
+}
+div#castro h3 {
+    font-size: 60px;
+}
+
+div#castro p {
+    font-size: 18px;
+}
+
+div#tangerine {
+    background: hsl(11, 69%, 61%);
+    height: 250vh;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-left: 50px;
+    overflow: visible;
+}
+
+div#caveat {
+    background-color: hsl(202, 41%, 48%);
+    height: 300vh;
+    width: 100%;
+    padding: 100px 20px;
+    text-align: center;
+    margin-left: 50px;
+    overflow: visible;
+}
+
+div#caveat h3{
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    color: hsl(360, 100%, 100%);
+}
+
+div#caveat p{
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    color: hsl(360, 100%, 100%);
+}
+
+
+/* -------------------------*/
+/* Wire Frame Section */
+#wire 
+{
+    color: hsl(360, 100%, 100%);
+    background: hsl(202, 41%, 48%);
+    font-family: 'Tangerine', cursive;
+    font-size: 130px;
+    margin-left: 100px;
+    height: 2000px;
+}
+
+#wire img  {
+    width: 60%;
+    height: 60%;
+    margin: 30px;
+}
+
+#code 
+{
+    color: hsl(11, 69%, 61%);
+    background: hsl(0, 0%, 0%);
+    font-family: 'Tangerine', cursive;
+    font-size: 100px;
+    text-align: center;
+    height: 2000px;
+}
+
+#code h2 {
+    padding: 30px;
+}
+
+div#html, div#css {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: hsl(360, 100%, 100%);
+    margin-left: 70px;
+}
+
+
+hr {
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+}
+
+div#html img, div#css img {
+    width: 80%;
+    height: 80%;
+    padding: 30px 30px 30px 50px;
+    margin-bottom: 50px;
+    
+
+}
